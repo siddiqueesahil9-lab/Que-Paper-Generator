@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Question Paper Generator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<div class="dashboard-container">
+
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+
+    <div class="sidebar-logo">
+
+        <i class="fa-solid fa-file-circle-check"></i>
+
+        <h2>QPG</h2>
+
+    </div>
+
+
+    <ul>
+
+
+        <li class="active">
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="add-question.html">
+
+                <i class="fa-solid fa-square-plus"></i>
+
+                Add Question
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="question-bank.html">
+
+                <i class="fa-solid fa-book"></i>
+
+                Question Bank
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="generate-paper.html">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Generate Paper
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="paper.html">
+
+                <i class="fa-solid fa-print"></i>
+
+                Generated Papers
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+
+</aside>
+
+
+
+<!-- Main Content -->
+
+
+<main class="main-content">
+
+
+<header>
+
+<h1>
+Dashboard
+</h1>
+
+<p>
+Welcome Teacher 👋
+</p>
+
+</header>
+
+
+
+
+<!-- Cards -->
+
+
+<section class="cards">
+
+
+<div class="card-box">
+
+<i class="fa-solid fa-circle-question"></i>
+
+<h2 id="totalQuestion">0</h2>
+
+<p>
+Total Questions
+</p>
+
+</div>
+
+
+
+
+<div class="card-box">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h2 id="totalSubject">0</h2>
+
+<p>
+Total Subjects
+</p>
+
+</div>
+
+
+
+
+
+<div class="card-box">
+
+<i class="fa-solid fa-file-circle-check"></i>
+
+<h2 id="generatedPaper">0</h2>
+
+<p>
+Generated Papers
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- Quick Actions -->
+
+
+<section class="quick-actions">
+
+
+<h2>
+Quick Actions
+</h2>
+
+
+<div class="action-buttons">
+
+
+<a href="add-question.html" class="action-btn">
+
+Add Question
+
+</a>
+
+
+
+<a href="question-bank.html" class="action-btn">
+
+Question Bank
+
+</a>
+
+
+
+
+<a href="generate-paper.html" class="action-btn">
+
+Generate Paper
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Recent Activity -->
+
+
+<section class="recent">
+
+
+<h2>
+Recent Activity
+</h2>
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>Date</th>
+
+<th>Activity</th>
+
+<th>Status</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="activityTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</section>
+
+
+
+</main>
+
+
+</div>
+
+
+
+<script src="js/activity.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

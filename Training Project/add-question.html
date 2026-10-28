@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Question</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <i class="fa-solid fa-file-circle-check"></i>
+            <h2>QPG</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="add-question.html">
+                    <i class="fa-solid fa-square-plus"></i>
+                    Add Question
+                </a>
+            </li>
+
+            <li>
+                <a href="question-bank.html">
+                    <i class="fa-solid fa-book"></i>
+                    Question Bank
+                </a>
+            </li>
+
+            <li>
+                <a href="generate-paper.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Generate Paper
+                </a>
+            </li>
+
+            <li>
+                <a href="paper.html">
+                    <i class="fa-solid fa-print"></i>
+                    Generated Papers
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <header>
+
+            <h1>Add Question</h1>
+
+            <p>Create New Question</p>
+
+        </header>
+
+        <div class="form-container">
+
+            <form id="questionForm">
+
+                <div class="input-group">
+
+                    <label>Subject</label>
+
+                    <select id="subject">
+
+                        <option>Java</option>
+                        <option>C</option>
+                        <option>C++</option>
+                        <option>Python</option>
+                        <option>JavaScript</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Topic</label>
+
+                    <input
+                        type="text"
+                        id="topic"
+                        placeholder="Enter Topic">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Difficulty</label>
+
+                    <select id="difficulty">
+
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Marks</label>
+
+                    <input
+                        type="number"
+                        id="marks"
+                        placeholder="Enter Marks">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Question</label>
+
+                    <textarea
+                        id="question"
+                        rows="5"
+                        placeholder="Write Question"></textarea>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Option A</label>
+
+                    <input type="text" id="optionA">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Option B</label>
+
+                    <input type="text" id="optionB">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Option C</label>
+
+                    <input type="text" id="optionC">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Option D</label>
+
+                    <input type="text" id="optionD">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Correct Answer</label>
+
+                    <select id="answer">
+
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+
+                    </select>
+
+                </div>
+
+                <button class="save-btn">
+
+                    Save Question
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/addQuestion.js"></script>
+<script src="js/activity.js"></script>
+<script src="js/addQuestion.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Question Bank</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/question-Bank.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <h2>QPG</h2>
+
+        </div>
+
+        <ul>
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="add-question.html">
+
+                    <i class="fa-solid fa-square-plus"></i>
+
+                    Add Question
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="question-bank.html">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    Question Bank
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="generate-paper.html">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    Generate Paper
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="paper.html">
+
+                    <i class="fa-solid fa-print"></i>
+
+                    Generated Papers
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <h1>Question Bank</h1>
+
+            <p>Manage, Search, Edit & Delete Questions</p>
+
+        </header>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                <h2 id="totalQuestions">0</h2>
+
+                <p>Total Questions</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-book"></i>
+
+                <h2 id="totalSubjects">0</h2>
+
+                <p>Subjects</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <h2 id="totalEasy">0</h2>
+
+                <p>Easy Questions</p>
+
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Question...">
+
+            <select id="subjectFilter">
+
+                <option value="All">All Subjects</option>
+
+                <option value="Java">Java</option>
+
+                <option value="C">C</option>
+
+                <option value="C++">C++</option>
+
+                <option value="Python">Python</option>
+
+                <option value="JavaScript">JavaScript</option>
+
+            </select>
+
+            <select id="difficultyFilter">
+
+                <option value="All">All Difficulty</option>
+
+                <option value="Easy">Easy</option>
+
+                <option value="Medium">Medium</option>
+
+                <option value="Hard">Hard</option>
+
+            </select>
+
+        </div>
+
+        <!-- Question Cards -->
+
+        <div id="questionContainer" class="question-container">
+                    <!-- Empty State -->
+
+        <div class="empty-state" id="emptyState">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <h2>No Questions Found</h2>
+
+            <p>
+                Add your first question from the
+                <b>Add Question</b> page.
+            </p>
+
+            <a href="add-question.html" class="add-question-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add Question
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- ===========================
+     Edit Question Modal
+=========================== -->
+
+<div class="modal" id="editModal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" id="closeModal">
+            &times;
+        </span>
+
+        <h2>Edit Question</h2>
+
+        <form id="editForm">
+
+            <input
+                type="hidden"
+                id="editId">
+
+            <label>Subject</label>
+
+            <select id="editSubject">
+
+                <option>Java</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>Python</option>
+                <option>JavaScript</option>
+
+            </select>
+
+            <label>Topic</label>
+
+            <input
+                type="text"
+                id="editTopic">
+
+            <label>Difficulty</label>
+
+            <select id="editDifficulty">
+
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+
+            </select>
+
+            <label>Marks</label>
+
+            <input
+                type="number"
+                id="editMarks">
+
+            <label>Question</label>
+
+            <textarea
+                id="editQuestion"
+                rows="5"></textarea>
+
+            <label>Option A</label>
+
+            <input
+                type="text"
+                id="editOptionA">
+
+            <label>Option B</label>
+
+            <input
+                type="text"
+                id="editOptionB">
+
+            <label>Option C</label>
+
+            <input
+                type="text"
+                id="editOptionC">
+
+            <label>Option D</label>
+
+            <input
+                type="text"
+                id="editOptionD">
+
+            <label>Correct Answer</label>
+
+            <select id="editAnswer">
+
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+
+            </select>
+
+            <button
+                type="submit"
+                class="update-btn">
+
+                Update Question
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/questionBank.js"></script>
+
+</body>
+
+</html>
